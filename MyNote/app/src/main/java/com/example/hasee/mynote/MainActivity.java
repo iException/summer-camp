@@ -35,15 +35,15 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //获取返回值
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         Bundle bundle=data.getExtras();
         String str=bundle.getString("backData");
-        //String item=data.getStringExtra("backData");
         TextView editText = (TextView) findViewById(R.id.item);
         String oldstr = editText.getText().toString();
         if (oldstr!="") oldstr+='\n';
-        editText.setText(oldstr+(++countItem)+". "+str);
+        editText.setText(oldstr+(++countItem)+". "+str); //更新备忘录
     }
 
     @Override
