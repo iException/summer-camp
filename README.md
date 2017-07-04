@@ -1,2 +1,3 @@
 # summer-camp
-A simple notes app
+没学过java
+完全懵逼= =
