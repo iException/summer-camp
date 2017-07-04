@@ -1,2 +1,6 @@
-# summer-camp
-A simple notes app
+## 备忘录APP
+
+### 完成功能
+
+* 显示备忘条目列表
+* 添加新的备忘条目
