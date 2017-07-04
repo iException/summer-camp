@@ -30,7 +30,7 @@ export default class MemoList extends Component {
 
         this.state = {
             memo_list: new Array(12).fill({
-                title: 'what?',
+                title: '备忘录',
                 content: 'I don\'t know',
                 time: new Date(),
             }),
@@ -77,7 +77,7 @@ export default class MemoList extends Component {
     componentDidMount() {
 
         const params = this.props.navigation.state.params;
-        if(params.memo && params.index) {
+        if(params && params.memo && params.index) {
             let { title, content, time } = this.props.navigation.state.params.memo;
             let index = this.props.navigation.state.params.index;
         }
