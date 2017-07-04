@@ -66,19 +66,19 @@ class ViewController: UIViewController {
     //add note segue prepare
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "openNote" {
-            let vc = segue.destination as? NoteDetailController
-            vc?.delegate = self
+            let vc = segue.destination as! NoteDetailController
+            vc.delegate = self
             
             if let noteItem = sender as? NoteItem {
                 if noteItem.noteContent.text == nil {
-                    vc?.context.text = noteItem.noteTitle.text
+                    vc.content = noteItem.noteTitle.text
                 }else {
-                    vc?.context.text = noteItem.noteTitle.text! + noteItem.noteContent.text!
+                    vc.content = noteItem.noteTitle.text! + noteItem.noteContent.text!
                 }
-                vc?.indexPath = noteListView.indexPath(for: noteItem)
-                vc?.status = OpenStatus.MODIFY
+                vc.indexPath = noteListView.indexPath(for: noteItem)
+                vc.status = OpenStatus.MODIFY
             }else {
-                vc?.status = OpenStatus.NEW
+                vc.status = OpenStatus.NEW
             }
         }
     }

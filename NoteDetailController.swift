@@ -16,13 +16,14 @@ class NoteDetailController: UIViewController {
     
     var status: OpenStatus?
     var indexPath: IndexPath?
-    
+    var content: String?
     var delegate: NoteDetailDelegate?
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        context.text = content
     }
     
     @IBAction func back(_ sender: UIButton) {
@@ -43,6 +44,8 @@ class NoteDetailController: UIViewController {
         if status == OpenStatus.MODIFY {
             delegate?.deleteNote(indexPath: indexPath!)
         }
+        self.dismiss(animated: true, completion: nil)
+
     }
     
     @IBAction func shareNote(_ sender: UIButton) {
