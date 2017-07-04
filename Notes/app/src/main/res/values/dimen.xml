@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="note_text">20dp</dimen>
+    <dimen name="note_time">10dp</dimen>
+    <dimen name="note_margin_horizon">10dp</dimen>
+</resources>
