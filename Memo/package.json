@@ -1,0 +1,27 @@
+{
+	"name": "Memo",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"test": "jest"
+	},
+	"dependencies": {
+		"react": "16.0.0-alpha.12",
+		"react-native": "0.45.1",
+		"react-native-material-design": "^0.3.7",
+		"react-native-navigation-bar": "^0.2.1",
+		"react-native-storage": "^0.2.2",
+		"react-navigation": "^1.0.0-beta.11",
+		"react-router-native": "^4.1.1"
+	},
+	"devDependencies": {
+		"babel-jest": "20.0.3",
+		"babel-preset-react-native": "2.0.0",
+		"jest": "20.0.4",
+		"react-test-renderer": "16.0.0-alpha.12"
+	},
+	"jest": {
+		"preset": "react-native"
+	}
+}
